@@ -1,0 +1,54 @@
+{
+  "title": "Dérivation",
+  "description": "Dérivées usuelles, opérations, tangente, variations, extremums.",
+  "questions": [
+    {
+      "q": "La dérivée de <code>f(x) = x²</code> est :",
+      "options": ["2x", "x", "x²/2", "2"],
+      "correct": 0,
+      "e": "Avec <code>(xⁿ)′ = n·xⁿ⁻¹</code>, on obtient <b>(x²)′ = 2x</b>."
+    },
+    {
+      "q": "La dérivée de <code>f(x) = 1/x</code> (pour x ≠ 0) est :",
+      "options": ["−1/x²", "1/x²", "ln(x)", "−1/x"],
+      "correct": 0,
+      "e": "C'est une dérivée usuelle à connaître : <b>(1/x)′ = −1/x²</b>."
+    },
+    {
+      "q": "La dérivée de <code>f(x) = √x</code> (pour x &gt; 0) est :",
+      "options": ["1/(2√x)", "2√x", "1/√x", "√x/2"],
+      "correct": 0,
+      "e": "Dérivée usuelle : <b>(√x)′ = 1/(2√x)</b>."
+    },
+    {
+      "q": "La dérivée d'un produit <code>uv</code> est :",
+      "options": ["u′v + uv′", "u′v′", "u′v − uv′", "(u + v)′"],
+      "correct": 0,
+      "e": "Formule du produit : <b>(uv)′ = u′v + uv′</b>."
+    },
+    {
+      "q": "La dérivée de <code>f(x) = x³ − 2x² + 5</code> est :",
+      "options": ["3x² − 4x", "3x² − 4x + 5", "3x² − 2x", "x² − 4x"],
+      "correct": 0,
+      "e": "Terme à terme : <code>(x³)′ = 3x²</code>, <code>(−2x²)′ = −4x</code>, <code>(5)′ = 0</code> ⇒ <b>3x² − 4x</b>."
+    },
+    {
+      "q": "Soit <code>f(x) = 1/x</code>. Le nombre dérivé <code>f ′(2)</code> vaut :",
+      "options": ["−1/4", "1/4", "−1/2", "−2"],
+      "correct": 0,
+      "e": "<code>f ′(x) = −1/x²</code>, donc <code>f ′(2) = −1/2² = −1/4</code>."
+    },
+    {
+      "q": "L'équation de la tangente à <code>f(x) = x² − 1</code> au point d'abscisse 2 est :",
+      "options": ["y = 4x − 5", "y = 4x + 3", "y = 2x − 1", "y = 4x − 1"],
+      "correct": 0,
+      "e": "<code>f(2) = 3</code> et <code>f ′(2) = 4</code> ⇒ <code>y = 4(x − 2) + 3 = 4x − 5</code>."
+    },
+    {
+      "q": "Si une fonction dérivable admet un extremum local en <code>a</code> (point intérieur à l'intervalle), alors :",
+      "options": ["f ′(a) = 0", "f(a) = 0", "f ′(a) &gt; 0", "f ′(a) n'existe pas"],
+      "correct": 0,
+      "e": "En un extremum local intérieur, la tangente est horizontale, donc <b>f ′(a) = 0</b> (la réciproque est fausse)."
+    }
+  ]
+}

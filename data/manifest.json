@@ -1,0 +1,28 @@
+{
+  "title": "Révisions",
+  "tagline": "Entraîne-toi, un niveau à la fois",
+  "levels": [
+    {
+      "id": "premiere-spe",
+      "name": "Première · Spé Maths",
+      "icon": "∫",
+      "color": "#2f6f8f",
+      "quizzes": [
+        { "id": "spe-second-degre",     "file": "data/premiere-spe/second-degre.json" },
+        { "id": "spe-suites",           "file": "data/premiere-spe/suites.json" },
+        { "id": "spe-derivation",       "file": "data/premiere-spe/derivation.json" },
+        { "id": "spe-produit-scalaire", "file": "data/premiere-spe/produit-scalaire.json" },
+        { "id": "spe-probabilites",     "file": "data/premiere-spe/probabilites.json" }
+      ]
+    },
+    {
+      "id": "premiere-tc",
+      "name": "Première · Tronc commun",
+      "icon": "∑",
+      "color": "#c9871f",
+      "quizzes": [
+        { "id": "tc-complet", "file": "data/tronc-commun/programme-complet.json" }
+      ]
+    }
+  ]
+}

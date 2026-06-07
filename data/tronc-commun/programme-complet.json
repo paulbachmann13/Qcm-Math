@@ -1,0 +1,36 @@
+{
+  "title": "Programme complet",
+  "description": "Les 6 thèmes du tronc commun, mélangés. Idéal pour un test global.",
+  "questions": [
+    { "theme": "Suites", "q": "Une suite arithmétique a pour premier terme <code>u₀ = 5</code> et pour raison <code>r = 3</code>. Que vaut <code>u₄</code> ?", "options": ["11", "15", "17", "20"], "correct": 2, "e": "On utilise <code>uₙ = u₀ + n·r</code>, donc <b>u₄ = 5 + 4×3 = 17</b>." },
+    { "theme": "Suites", "q": "Une suite arithmétique a pour raison <code>r = −2</code>. Elle est :", "options": ["Croissante", "Décroissante", "Constante", "Non monotone"], "correct": 1, "e": "Le signe de la raison donne le sens de variation : <code>r &lt; 0</code> ⇒ suite <b>décroissante</b>." },
+    { "theme": "Suites", "q": "Une suite géométrique a pour premier terme <code>v₀ = 2</code> et pour raison <code>q = 3</code>. Que vaut <code>v₃</code> ?", "options": ["6", "18", "54", "162"], "correct": 2, "e": "On utilise <code>vₙ = v₀ · qⁿ</code>, donc <b>v₃ = 2 × 3³ = 54</b>." },
+    { "theme": "Suites", "q": "Une population diminue de 8 % chaque année. La raison de la suite géométrique qui la modélise est :", "options": ["−0,08", "0,08", "0,92", "1,08"], "correct": 2, "e": "Baisser de 8 %, c'est multiplier par <code>1 − 0,08 = 0,92</code>." },
+
+    { "theme": "Fonctions", "q": "Soit <code>f(x) = −2x + 3</code>. Son coefficient directeur est :", "options": ["3", "−3", "2", "−2"], "correct": 3, "e": "Pour <code>f(x) = ax + b</code>, le coefficient directeur est <code>a</code>, ici <b>−2</b>." },
+    { "theme": "Fonctions", "q": "La fonction <code>f(x) = 3x − 1</code> est :", "options": ["Croissante", "Décroissante", "Constante", "Ni l'une ni l'autre"], "correct": 0, "e": "Une fonction affine est <b>croissante</b> quand son coefficient directeur est positif (<code>3 &gt; 0</code>)." },
+    { "theme": "Fonctions", "q": "Pour tous réels <code>a</code> et <code>b</code>, <code>exp(a) × exp(b)</code> = :", "options": ["exp(a + b)", "exp(a × b)", "exp(a) + exp(b)", "2·exp(a + b)"], "correct": 0, "e": "L'exponentielle transforme les sommes en produits : <b>exp(a + b)</b>." },
+    { "theme": "Fonctions", "q": "Que vaut <code>exp(0)</code> ?", "options": ["0", "1", "e", "−1"], "correct": 1, "e": "<b>exp(0) = 1</b> (et exp(1) = e)." },
+    { "theme": "Fonctions", "q": "Un placement augmente de 21 % en 2 ans. Le taux d'évolution moyen annuel est :", "options": ["10 %", "10,5 %", "11 %", "21 %"], "correct": 0, "e": "<code>(1 + t)² = 1,21</code> ⇒ <code>1 + t = 1,1</code> ⇒ <b>t = 10 %</b>." },
+
+    { "theme": "Dérivation", "q": "Soit <code>f(x) = x³</code>. Sa dérivée est :", "options": ["x²", "3x", "3x²", "2x"], "correct": 2, "e": "<code>(xⁿ)′ = n·xⁿ⁻¹</code>, donc <b>(x³)′ = 3x²</b>." },
+    { "theme": "Dérivation", "q": "Soit <code>f(x) = 5x² − 3x + 2</code>. Sa dérivée est :", "options": ["10x − 3", "5x − 3", "10x + 2", "10x − 3x"], "correct": 0, "e": "Terme à terme : <code>(5x²)′ = 10x</code>, <code>(−3x)′ = −3</code>, <code>(2)′ = 0</code>." },
+    { "theme": "Dérivation", "q": "La tangente à la courbe de <code>f</code> au point d'abscisse <code>a</code> a pour coefficient directeur :", "options": ["f(a)", "f ′(a)", "a", "f ′(x)"], "correct": 1, "e": "Le nombre dérivé <b>f ′(a)</b> est le coefficient directeur de la tangente en a." },
+    { "theme": "Dérivation", "q": "Soit <code>f(x) = x²</code>. La tangente au point d'abscisse 1 a pour équation :", "options": ["y = 2x", "y = x − 1", "y = 2x + 1", "y = 2x − 1"], "correct": 3, "e": "<code>y = f ′(1)(x − 1) + f(1)</code> avec <code>f(1) = 1</code>, <code>f ′(1) = 2</code> ⇒ <b>y = 2x − 1</b>." },
+    { "theme": "Dérivation", "q": "Sur un intervalle où <code>f ′(x) &gt; 0</code>, la fonction <code>f</code> est :", "options": ["Croissante", "Décroissante", "Constante", "Nulle"], "correct": 0, "e": "Le signe de la dérivée donne le sens de variation : <code>f ′ &gt; 0</code> ⇒ <b>croissante</b>." },
+
+    { "theme": "Information chiffrée", "q": "Un prix de 80 € augmente de 25 %. Le nouveau prix est :", "options": ["84 €", "95 €", "100 €", "105 €"], "correct": 2, "e": "<code>80 × 1,25 = 100 €</code>." },
+    { "theme": "Information chiffrée", "q": "Un article passe de 50 € à 40 €. Le taux d'évolution est :", "options": ["−10 %", "−20 %", "−25 %", "+20 %"], "correct": 1, "e": "<code>(40 − 50)/50 = −0,20</code>, soit une <b>baisse de 20 %</b>." },
+    { "theme": "Information chiffrée", "q": "Une hausse de 50 % suivie d'une baisse de 50 % donne globalement :", "options": ["Aucun changement", "Une hausse de 25 %", "Une baisse de 25 %", "Une baisse de 50 %"], "correct": 2, "e": "<code>1,5 × 0,5 = 0,75</code> ⇒ <b>baisse de 25 %</b>. Les pourcentages ne s'additionnent pas !" },
+    { "theme": "Information chiffrée", "q": "Deux hausses successives de 10 % correspondent à une hausse globale de :", "options": ["11 %", "20 %", "21 %", "100 %"], "correct": 2, "e": "<code>1,1 × 1,1 = 1,21</code> ⇒ <b>+ 21 %</b>." },
+
+    { "theme": "Probabilités", "q": "<code>A</code> et <code>B</code> indépendants, <code>P(A) = 0,5</code>, <code>P(B) = 0,4</code>. Alors <code>P(A∩B)</code> = :", "options": ["0,10", "0,20", "0,45", "0,90"], "correct": 1, "e": "Indépendance : <code>P(A∩B) = P(A) × P(B) = 0,20</code>." },
+    { "theme": "Probabilités", "q": "La probabilité de <code>B</code> sachant <code>A</code>, <code>P_A(B)</code>, vaut :", "options": ["P(A∩B) / P(A)", "P(A∩B) / P(B)", "P(A) × P(B)", "P(A) + P(B)"], "correct": 0, "e": "<b>P_A(B) = P(A∩B) / P(A)</b>." },
+    { "theme": "Probabilités", "q": "Sur un arbre, la somme des probabilités des branches issues d'un même nœud vaut :", "options": ["0", "0,5", "1", "Cela dépend"], "correct": 2, "e": "Les branches d'un même nœud forment un système complet : somme = <b>1</b>." },
+    { "theme": "Probabilités", "q": "On lance 3 fois une pièce équilibrée. Probabilité d'obtenir 3 fois « pile » :", "options": ["1/8", "1/6", "3/8", "1/2"], "correct": 0, "e": "Lancers indépendants : <code>(1/2)³ = 1/8</code>." },
+    { "theme": "Probabilités", "q": "Deux événements <code>A</code> et <code>B</code> sont indépendants lorsque :", "options": ["P(A∩B) = P(A) × P(B)", "A ∩ B = ∅", "P(A) = P(B)", "P(A∪B) = P(A) + P(B)"], "correct": 0, "e": "Définition de l'indépendance, à ne pas confondre avec l'incompatibilité (<code>A ∩ B = ∅</code>)." },
+
+    { "theme": "Automatismes", "q": "Dans un tableur, pour la somme des cellules de A1 à A10, on écrit :", "options": ["=SOMME(A1:A10)", "=A1+A10", "SOMME(A1;A10)", "=MOYENNE(A1:A10)"], "correct": 0, "e": "La fonction <code>SOMME</code> additionne toute la plage <b>A1:A10</b>." },
+    { "theme": "Automatismes", "q": "Dans un tableur, la formule <code>=B2*1,15</code> appliquée à un prix calcule :", "options": ["Une hausse de 15 %", "Une baisse de 15 %", "Une hausse de 1,15 %", "Une baisse de 85 %"], "correct": 0, "e": "Multiplier par <code>1,15</code> ⇒ <b>augmentation de 15 %</b>." }
+  ]
+}

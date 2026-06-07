@@ -185,3 +185,23 @@ footer{text-align:center;font-size:12px;color:var(--ink-soft);margin-top:26px;li
 @keyframes pop{from{opacity:0;transform:translateY(14px) scale(.99)}to{opacity:1;transform:none}}
 .pop{animation:pop .4s cubic-bezier(.22,1,.36,1) both}
 @keyframes stagger{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- Level list cards ---------- */
+.level-card{display:flex;align-items:center;gap:16px;width:100%;text-align:left;cursor:pointer;
+  background:var(--paper-2);border:1px solid var(--line);border-left-width:5px;border-radius:16px;
+  padding:18px 16px;margin-bottom:14px;transition:transform .14s ease,box-shadow .14s ease}
+.level-card:hover{transform:translateY(-2px);box-shadow:0 14px 28px -18px rgba(20,33,61,.6)}
+.lc-icon{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+  font-family:'Fraunces',serif;font-style:italic;font-size:24px;color:#fff;font-weight:600}
+.lc-body{flex:1;min-width:0}
+.lc-name{font-family:'Fraunces',serif;font-weight:700;font-size:19px;color:var(--navy);line-height:1.15}
+.lc-meta{font-size:13px;color:var(--ink-soft);margin-top:3px;font-weight:500}
+.lc-arrow{flex:none;font-size:20px;color:var(--gold);font-weight:700}
+
+/* ---------- Level page header ---------- */
+.level-page-head{display:flex;align-items:center;gap:13px;background:var(--paper-2);
+  border:1px solid var(--line);border-left-width:5px;border-radius:14px;
+  padding:15px 16px;margin-bottom:20px}
+
+/* ---------- Simulation note ---------- */
+.sim-note{font-family:'Fraunces',serif;font-weight:700;font-size:22px;color:var(--navy);margin:8px 0 4px}

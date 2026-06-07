@@ -7,7 +7,7 @@
       "name": "Première · Spé Maths",
       "icon": "∫",
       "color": "#2f6f8f",
-      "general_training": { "questions_per_quiz": 3 },
+      "general_training": { "total": 30 },
       "quizzes": [
         { "id": "spe-second-degre",          "file": "data/premiere-spe/second-degre.json" },
         { "id": "spe-suites",                "file": "data/premiere-spe/suites.json" },

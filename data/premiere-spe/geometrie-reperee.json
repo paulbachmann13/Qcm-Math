@@ -1,0 +1,54 @@
+{
+  "title": "Géométrie repérée",
+  "description": "Équations de droites, vecteur directeur, vecteur normal, cercle.",
+  "questions": [
+    {
+      "q": "La droite d'équation <code>y = 2x − 3</code> a pour vecteur directeur :",
+      "options": ["(1 ; 2)", "(2 ; −3)", "(−3 ; 2)", "(1 ; −3)"],
+      "correct": 0,
+      "e": "Pour <code>y = mx + b</code>, un vecteur directeur est <b>(1 ; m)</b>, ici <b>(1 ; 2)</b>."
+    },
+    {
+      "q": "La droite d'équation <code>3x − 2y + 5 = 0</code> a pour vecteur normal :",
+      "options": ["(3 ; −2)", "(−2 ; 3)", "(3 ; 2)", "(2 ; 3)"],
+      "correct": 0,
+      "e": "Dans <code>ax + by + c = 0</code>, le vecteur normal est <b>(a ; b)</b>, ici <b>(3 ; −2)</b>."
+    },
+    {
+      "q": "Deux droites sont parallèles si et seulement si leurs vecteurs directeurs sont :",
+      "options": ["Colinéaires", "Orthogonaux", "Égaux", "De même norme"],
+      "correct": 0,
+      "e": "Des droites parallèles ont des vecteurs directeurs <b>colinéaires</b> (proportionnels)."
+    },
+    {
+      "q": "Deux droites sont perpendiculaires si et seulement si leurs vecteurs directeurs sont :",
+      "options": ["Orthogonaux (produit scalaire nul)", "Colinéaires", "De même norme", "Opposés"],
+      "correct": 0,
+      "e": "Deux droites perpendiculaires ⟺ leurs vecteurs directeurs ont un <b>produit scalaire nul</b>."
+    },
+    {
+      "q": "L'équation d'un cercle de centre <code>Ω(a ; b)</code> et de rayon <code>r</code> est :",
+      "options": ["(x − a)² + (y − b)² = r²", "(x + a)² + (y + b)² = r", "x² + y² = r²", "(x − a) + (y − b) = r"],
+      "correct": 0,
+      "e": "Un point M(x,y) est sur le cercle ⟺ <code>ΩM = r</code> ⟺ <b>(x − a)² + (y − b)² = r²</b>."
+    },
+    {
+      "q": "Le cercle d'équation <code>(x − 1)² + (y + 2)² = 9</code> a pour centre et rayon :",
+      "options": ["Centre (1 ; −2), rayon 3", "Centre (−1 ; 2), rayon 9", "Centre (1 ; −2), rayon 9", "Centre (1 ; 2), rayon 3"],
+      "correct": 0,
+      "e": "On lit directement : centre <b>(1 ; −2)</b> et rayon <b>r = √9 = 3</b>."
+    },
+    {
+      "q": "Le projeté orthogonal d'un point <code>M</code> sur une droite <code>d</code> est :",
+      "options": ["Le pied de la perpendiculaire abaissée de M sur d", "Le symétrique de M par rapport à d", "Le milieu de M et d", "L'intersection de d avec l'axe des x"],
+      "correct": 0,
+      "e": "Le projeté orthogonal H de M sur d est le point de d tel que <b>MH ⊥ d</b>."
+    },
+    {
+      "q": "Deux droites d'équations <code>y = 3x + 1</code> et <code>y = 3x − 5</code> sont :",
+      "options": ["Parallèles (et distinctes)", "Perpendiculaires", "Sécantes", "Confondues"],
+      "correct": 0,
+      "e": "Même coefficient directeur (3) mais ordonnées à l'origine différentes (1 ≠ −5) ⇒ <b>droites parallèles distinctes</b>."
+    }
+  ]
+}

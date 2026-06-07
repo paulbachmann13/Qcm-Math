@@ -7,13 +7,17 @@
       "name": "Première · Spé Maths",
       "icon": "∫",
       "color": "#2f6f8f",
-      "general_training": { "questions_per_quiz": 5 },
+      "general_training": { "questions_per_quiz": 3 },
       "quizzes": [
-        { "id": "spe-second-degre",     "file": "data/premiere-spe/second-degre.json" },
-        { "id": "spe-suites",           "file": "data/premiere-spe/suites.json" },
-        { "id": "spe-derivation",       "file": "data/premiere-spe/derivation.json" },
-        { "id": "spe-produit-scalaire", "file": "data/premiere-spe/produit-scalaire.json" },
-        { "id": "spe-probabilites",     "file": "data/premiere-spe/probabilites.json" }
+        { "id": "spe-second-degre",          "file": "data/premiere-spe/second-degre.json" },
+        { "id": "spe-suites",                "file": "data/premiere-spe/suites.json" },
+        { "id": "spe-derivation",            "file": "data/premiere-spe/derivation.json" },
+        { "id": "spe-fonction-exp",          "file": "data/premiere-spe/fonction-exponentielle.json" },
+        { "id": "spe-trigo",                 "file": "data/premiere-spe/trigonometrie.json" },
+        { "id": "spe-produit-scalaire",      "file": "data/premiere-spe/produit-scalaire.json" },
+        { "id": "spe-geometrie-reperee",     "file": "data/premiere-spe/geometrie-reperee.json" },
+        { "id": "spe-probabilites",          "file": "data/premiere-spe/probabilites.json" },
+        { "id": "spe-variables-aleatoires",  "file": "data/premiere-spe/variables-aleatoires.json" }
       ]
     },
     {

@@ -1,0 +1,54 @@
+{
+  "title": "Fonction exponentielle",
+  "description": "Définition, propriétés algébriques, dérivée, variations, limites.",
+  "questions": [
+    {
+      "q": "La fonction exponentielle est l'unique fonction vérifiant :",
+      "options": ["f ′ = f et f(0) = 1", "f ′ = f et f(1) = e", "f ′ = 1/f et f(0) = 1", "f ′ = 0 et f(0) = 1"],
+      "correct": 0,
+      "e": "Par définition, <b>exp′ = exp</b> et <b>exp(0) = 1</b>. C'est la seule fonction avec ces deux propriétés."
+    },
+    {
+      "q": "Pour tous réels <code>a</code> et <code>b</code>, <code>exp(a) × exp(b)</code> = :",
+      "options": ["exp(a + b)", "exp(a − b)", "exp(a) + exp(b)", "exp(a × b)"],
+      "correct": 0,
+      "e": "Règle fondamentale : <b>exp(a + b) = exp(a) × exp(b)</b>."
+    },
+    {
+      "q": "<code>exp(a − b)</code> = :",
+      "options": ["exp(a) / exp(b)", "exp(a) − exp(b)", "exp(a) × exp(−b)", "exp(a/b)"],
+      "correct": 0,
+      "e": "<code>exp(a − b) = exp(a + (−b)) = exp(a) × exp(−b) = exp(a) / exp(b)</code>. Les deux formes sont acceptées."
+    },
+    {
+      "q": "<code>(exp(a))ⁿ</code> = :",
+      "options": ["exp(na)", "n·exp(a)", "exp(aⁿ)", "exp(a) + n"],
+      "correct": 0,
+      "e": "<b>(exp(a))ⁿ = exp(na)</b>. En particulier, <code>eⁿ = exp(n)</code>."
+    },
+    {
+      "q": "La dérivée de <code>f(x) = exp(x)</code> est :",
+      "options": ["exp(x)", "x·exp(x)", "1/exp(x)", "exp(x − 1)"],
+      "correct": 0,
+      "e": "La fonction exponentielle est sa propre dérivée : <b>(exp(x))′ = exp(x)</b>."
+    },
+    {
+      "q": "Par la règle de dérivation des fonctions composées, la dérivée de <code>exp(3x + 1)</code> est :",
+      "options": ["3·exp(3x + 1)", "exp(3x + 1)", "3x·exp(3x)", "exp(3)"],
+      "correct": 0,
+      "e": "Avec <code>(exp(u))′ = u′·exp(u)</code>, on obtient <code>u′ = 3</code> ⇒ <b>3·exp(3x + 1)</b>."
+    },
+    {
+      "q": "La fonction exponentielle est :",
+      "options": ["Strictement croissante sur ℝ et toujours positive", "Croissante sur ℝ⁺ seulement", "Positive seulement pour x &gt; 0", "Décroissante sur ℝ"],
+      "correct": 0,
+      "e": "<b>exp est strictement croissante sur ℝ entier</b> et <b>exp(x) &gt; 0</b> pour tout x ∈ ℝ (jamais nulle)."
+    },
+    {
+      "q": "Que vaut <code>exp(−x)</code> ?",
+      "options": ["1/exp(x)", "−exp(x)", "exp(x)", "1 − exp(x)"],
+      "correct": 0,
+      "e": "<code>exp(x) × exp(−x) = exp(0) = 1</code>, donc <b>exp(−x) = 1/exp(x)</b>."
+    }
+  ]
+}

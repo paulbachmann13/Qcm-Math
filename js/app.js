@@ -4,21 +4,22 @@
    ========================================================= */
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
-const app = document.getElementById("app");
+const app   = document.getElementById("app");
 const subEl = document.getElementById("sub");
 
+// mode : "normal" | "general" | "simulation"
 const state = {
-  catalog:    [],
-  level:      null,
-  quiz:       null,
-  idx:        0,
-  score:      0,
-  answered:   false,
-  answers:    [],
-  isGeneral:  false,   // true quand c'est une session d'entraînement général
+  catalog:  [],
+  level:    null,
+  quiz:     null,
+  mode:     "normal",
+  idx:      0,
+  score:    0,
+  answered: false,
+  answers:  [],
 };
 
-/* ---------- Persistance (meilleur score) ---------- */
+/* ---------- Persistance ---------- */
 function bestKey(id) { return "qcm.best." + id; }
 function getBest(id) {
   try { const r = localStorage.getItem(bestKey(id)); return r ? JSON.parse(r) : null; }
@@ -38,7 +39,7 @@ function shuffle(arr) {
   return arr;
 }
 
-/* ---------- Chargement des données ---------- */
+/* ---------- Chargement ---------- */
 async function fetchJSON(url) {
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error("HTTP " + res.status + " — " + url);
@@ -83,13 +84,13 @@ function renderHome() {
 
   const levelsHTML = state.catalog.map((lvl) => {
 
-    /* Carte "Entraînement général" (si le niveau le supporte) */
+    /* ---- Carte entraînement général (spé maths) ---- */
     let generalHTML = "";
     if (lvl.general_training) {
-      const perQ      = lvl.general_training.questions_per_quiz || 5;
-      const valid     = lvl.quizzes.filter(q => q.data);
-      const totalQ    = valid.length * perQ;
-      const best      = getBest("general-" + lvl.id);
+      const perQ   = lvl.general_training.questions_per_quiz || 5;
+      const valid  = lvl.quizzes.filter(q => q.data);
+      const totalQ = valid.length * perQ;
+      const best   = getBest("general-" + lvl.id);
       const bestBadge = best ? `<span class="best">Record ${best.score}/${best.total}</span>` : "";
       generalHTML = `
         <div class="section-label">Entraînement général</div>
@@ -99,16 +100,33 @@ function renderHome() {
             <div class="qt">⚡ Session aléatoire</div>
             <div class="qd">Tirage équilibré sur tous les thèmes — chaque session est différente.</div>
           </div>
-          <div class="side">
-            <span class="count">${totalQ} Q</span>
-            ${bestBadge}
-          </div>
+          <div class="side"><span class="count">${totalQ} Q</span>${bestBadge}</div>
           <span class="arrow">→</span>
         </button>`;
     }
 
-    /* Cartes par thème */
-    const themeLabel = lvl.general_training
+    /* ---- Carte simulation brevet ---- */
+    let simulHTML = "";
+    if (lvl.simulation_brevet) {
+      const cfg  = lvl.simulation_brevet;
+      const best = getBest("simulation-" + lvl.id);
+      const bestBadge = best ? `<span class="best">Record ${best.score}/${best.total}</span>` : "";
+      simulHTML = `
+        <div class="section-label">Simulation examen</div>
+        <button class="quiz-card simulation" data-level="${lvl.id}" data-action="simulation"
+                style="border-left-color:${lvl.color}">
+          <div class="body">
+            <div class="qt">📝 Simulation brevet</div>
+            <div class="qd">${cfg.description || "Tirage aléatoire dans toute la base."}</div>
+          </div>
+          <div class="side"><span class="count">${cfg.total} Q</span>${bestBadge}</div>
+          <span class="arrow">→</span>
+        </button>`;
+    }
+
+    /* ---- Cartes par thème ---- */
+    const hasSpecial = lvl.general_training || lvl.simulation_brevet;
+    const themeLabel = hasSpecial
       ? `<div class="section-label" style="margin-top:22px">Par thème</div>` : "";
 
     const themeCards = lvl.quizzes.map((q) => {
@@ -140,9 +158,8 @@ function renderHome() {
           <div class="level-count">${nQuizzes} thème${nQuizzes > 1 ? "s" : ""}</div>
         </div>
       </div>
-      ${generalHTML}
-      ${themeLabel}
-      ${themeCards}
+      ${generalHTML}${simulHTML}
+      ${themeLabel}${themeCards}
     </section>`;
   }).join("");
 
@@ -152,55 +169,60 @@ function renderHome() {
     b.onclick = () => {
       const lvl  = state.catalog.find(l => l.id === b.dataset.level);
       const quiz = lvl.quizzes.find(q => q.id === b.dataset.quiz);
-      startQuiz(lvl, quiz, false);
+      startQuiz(lvl, quiz, "normal");
     };
   });
-
   document.querySelectorAll("[data-action='general']").forEach((b) => {
-    b.onclick = () => {
-      const lvl = state.catalog.find(l => l.id === b.dataset.level);
-      startGeneralTraining(lvl);
-    };
+    b.onclick = () => startGeneralTraining(state.catalog.find(l => l.id === b.dataset.level));
+  });
+  document.querySelectorAll("[data-action='simulation']").forEach((b) => {
+    b.onclick = () => startSimulationBrevet(state.catalog.find(l => l.id === b.dataset.level));
   });
 }
 
-/* ---------- Entraînement général (tirage équilibré) ---------- */
+/* ---------- Entraînement général — tirage équilibré ---------- */
 function startGeneralTraining(level) {
   const perQuiz = level.general_training?.questions_per_quiz || 5;
   const pool = [];
-
   for (const quiz of level.quizzes) {
     if (!quiz.data) continue;
-    // Copie les questions et ajoute le thème pour le bilan final
     const qs = quiz.data.questions.map(q => ({ ...q, theme: quiz.data.title }));
     shuffle(qs);
     pool.push(...qs.slice(0, perQuiz));
   }
-
   if (!pool.length) return;
-  shuffle(pool);  // mélange final pour briser l'ordre thème par thème
+  shuffle(pool);
+  startQuiz(level, {
+    id: "general-" + level.id,
+    data: { title: "Entraînement général", questions: pool }
+  }, "general");
+}
 
-  const virtualQuiz = {
-    id:   "general-" + level.id,
-    data: {
-      title:       "Entraînement général",
-      description: `${pool.length} questions tirées aléatoirement sur tous les thèmes.`,
-      questions:   pool,
-    },
-  };
-
-  startQuiz(level, virtualQuiz, true);
+/* ---------- Simulation brevet — tirage libre ---------- */
+function startSimulationBrevet(level) {
+  const total = level.simulation_brevet?.total || 10;
+  const pool  = [];
+  for (const quiz of level.quizzes) {
+    if (!quiz.data) continue;
+    pool.push(...quiz.data.questions.map(q => ({ ...q, theme: quiz.data.title })));
+  }
+  if (!pool.length) return;
+  shuffle(pool);
+  startQuiz(level, {
+    id: "simulation-" + level.id,
+    data: { title: "Simulation brevet", questions: pool.slice(0, total) }
+  }, "simulation");
 }
 
 /* ---------- Déroulé d'un QCM ---------- */
-function startQuiz(level, quiz, isGeneral = false) {
-  state.level     = level;
-  state.quiz      = quiz;
-  state.idx       = 0;
-  state.score     = 0;
-  state.answered  = false;
-  state.isGeneral = isGeneral;
-  state.answers   = new Array(quiz.data.questions.length).fill(null);
+function startQuiz(level, quiz, mode = "normal") {
+  state.level   = level;
+  state.quiz    = quiz;
+  state.mode    = mode;
+  state.idx     = 0;
+  state.score   = 0;
+  state.answered = false;
+  state.answers  = new Array(quiz.data.questions.length).fill(null);
   renderQuestion();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -211,7 +233,7 @@ function renderQuestion() {
   const Q        = quiz.questions[state.idx];
   const total    = quiz.questions.length;
   const progress = (state.idx / total) * 100;
-  const secLabel = Q.theme ? Q.theme : quiz.title;
+  const secLabel = Q.theme || quiz.title;
 
   app.innerHTML = `
     <button class="backlink" id="back">← ${state.level.name}</button>
@@ -237,7 +259,7 @@ function renderQuestion() {
 
   requestAnimationFrame(() => { document.getElementById("bar").style.width = progress + "%"; });
   document.getElementById("back").onclick = renderHome;
-  document.querySelectorAll(".opt").forEach((b) => b.onclick = () => choose(parseInt(b.dataset.i)));
+  document.querySelectorAll(".opt").forEach(b => b.onclick = () => choose(parseInt(b.dataset.i)));
 }
 
 function choose(choice) {
@@ -251,7 +273,7 @@ function choose(choice) {
     const i = parseInt(b.dataset.i);
     b.disabled = true;
     if (i === Q.correct) { b.classList.add("correct"); b.querySelector(".mark").textContent = "✓"; }
-    else if (i === choice) { b.classList.add("wrong");   b.querySelector(".mark").textContent = "✗"; }
+    else if (i === choice) { b.classList.add("wrong"); b.querySelector(".mark").textContent = "✗"; }
   });
 
   const ex = document.getElementById("explain");
@@ -279,7 +301,7 @@ function renderResult() {
   const isRecord = !prev || score > prev.score;
   if (isRecord) setBest(state.quiz.id, score, total);
 
-  /* Bilan par thème (si les questions ont un champ theme) */
+  /* Bilan par thème */
   const hasThemes = qs.some(q => q.theme);
   let breakdownHTML = "";
   if (hasThemes) {
@@ -300,13 +322,17 @@ function renderResult() {
     breakdownHTML = `<div class="breakdown"><h3>Résultats par thème</h3>${rows}</div>`;
   }
 
+  /* Note /10 pour la simulation brevet */
+  const isSim  = state.mode === "simulation";
+  const noteHTML = isSim
+    ? `<div class="pct" style="font-size:18px;margin-top:4px">Note : <b>${score}/10</b></div>` : "";
+
   /* Récap des erreurs */
   const wrong = qs.reduce((acc, q, i) => {
-    if (state.answers[i] !== q.correct) acc.push({ i, q });
-    return acc;
+    if (state.answers[i] !== q.correct) acc.push({ i, q }); return acc;
   }, []);
   const recapHTML = wrong.length === 0
-    ? `<div class="perfect">🎉 Sans-faute ! Toutes les réponses sont correctes.</div>`
+    ? `<div class="perfect">🎉 Sans-faute !</div>`
     : `<div class="recap"><h3>À revoir (${wrong.length})</h3>` +
       wrong.map(({ i, q }) => `<div class="recap-item">
         <b>Q${i + 1}${q.theme ? " · " + q.theme : ""}</b> — Bonne réponse :
@@ -314,18 +340,23 @@ function renderResult() {
       </div>`).join("") + `</div>`;
 
   let verdict, vsub;
-  if (pct >= 90) { verdict = "Excellent — tu maîtrises.";     vsub = "Enchaîne sur un autre thème pour tout balayer."; }
-  else if (pct >= 70) { verdict = "Très bien — bonnes bases."; vsub = "Quelques points à consolider, voir le récap."; }
-  else if (pct >= 50) { verdict = "Pas mal — ça avance.";      vsub = "Reprends tes erreurs, puis refais le QCM."; }
-  else                { verdict = "Encore du travail.";         vsub = "Revois la notion, une question à la fois."; }
+  if (pct >= 90)      { verdict = "Excellent !";           vsub = "Enchaîne sur un autre thème."; }
+  else if (pct >= 70) { verdict = "Très bien.";             vsub = "Quelques points à consolider."; }
+  else if (pct >= 50) { verdict = "Pas mal — ça avance.";   vsub = "Reprends tes erreurs puis recommence."; }
+  else                { verdict = "Encore du travail.";      vsub = "Revois la notion, une question à la fois."; }
 
-  const againLabel = state.isGeneral ? "Nouvelle session aléatoire" : "Recommencer ce QCM";
+  const againLabel = {
+    general:    "Nouvelle session aléatoire",
+    simulation: "Nouvelle simulation",
+    normal:     "Recommencer ce QCM",
+  }[state.mode];
 
   app.innerHTML = `
     <button class="backlink" id="back">← ${state.level.name}</button>
     <div class="card barred pop result">
       <div class="score-ring"><span id="cnt">0</span><small>/${total}</small></div>
       <div class="pct">${pct}% de réussite — ${quiz.title}</div>
+      ${noteHTML}
       ${isRecord && prev ? `<div class="newbest">★ Nouveau record</div>` : ""}
       <div class="verdict">${verdict}</div>
       <div class="verdict-sub">${vsub}</div>
@@ -336,7 +367,6 @@ function renderResult() {
       <button class="btn ghost" id="home">Choisir un autre QCM</button>
     </div>`;
 
-  /* Animations */
   let c = 0;
   const iv = setInterval(() => {
     c += Math.max(1, Math.round(score / 22));
@@ -349,8 +379,11 @@ function renderResult() {
 
   document.getElementById("back").onclick  = renderHome;
   document.getElementById("home").onclick  = renderHome;
-  document.getElementById("again").onclick = () =>
-    state.isGeneral ? startGeneralTraining(state.level) : startQuiz(state.level, state.quiz, false);
+  document.getElementById("again").onclick = () => {
+    if (state.mode === "general")    startGeneralTraining(state.level);
+    else if (state.mode === "simulation") startSimulationBrevet(state.level);
+    else startQuiz(state.level, state.quiz, "normal");
+  };
 }
 
 init();

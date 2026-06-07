@@ -21,6 +21,24 @@
       ]
     },
     {
+      "id": "brevet",
+      "name": "Brevet · Maths",
+      "icon": "π",
+      "color": "#7a5cb0",
+      "simulation_brevet": {
+        "total": 10,
+        "description": "10 questions tirées au hasard dans toute la base — comme le vrai examen."
+      },
+      "quizzes": [
+        { "id": "brevet-calcul",    "file": "data/brevet/calcul-numerique.json" },
+        { "id": "brevet-algebre",   "file": "data/brevet/algebre.json" },
+        { "id": "brevet-fonctions", "file": "data/brevet/fonctions.json" },
+        { "id": "brevet-geo",       "file": "data/brevet/geometrie.json" },
+        { "id": "brevet-stats",     "file": "data/brevet/stats-probas.json" },
+        { "id": "brevet-3eme",      "file": "data/brevet/notions-3eme.json" }
+      ]
+    },
+    {
       "id": "premiere-tc",
       "name": "Première · Tronc commun",
       "icon": "∑",

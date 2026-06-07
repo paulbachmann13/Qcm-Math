@@ -1,0 +1,66 @@
+{
+  "title": "Algèbre",
+  "description": "Équations, inéquations, développement, factorisation, identités remarquables.",
+  "questions": [
+    {
+      "q": "La solution de l'équation <code>3x − 5 = 10</code> est :",
+      "options": ["5", "3", "15", "1,67"],
+      "correct": 0,
+      "e": "<code>3x = 15</code> donc <b>x = 5</b>."
+    },
+    {
+      "q": "Le développement de <code>3(2x − 4)</code> est :",
+      "options": ["6x − 12", "6x − 4", "2x − 12", "6x + 12"],
+      "correct": 0,
+      "e": "On distribue : <code>3 × 2x = 6x</code> et <code>3 × (−4) = −12</code>, d'où <b>6x − 12</b>."
+    },
+    {
+      "q": "La factorisation de <code>6x + 9</code> est :",
+      "options": ["3(2x + 3)", "3(2x + 9)", "6(x + 3)", "2(3x + 9)"],
+      "correct": 0,
+      "e": "Le PGCD de 6 et 9 est 3 : <code>6x + 9 = 3 × 2x + 3 × 3 = <b>3(2x + 3)</b></code>."
+    },
+    {
+      "q": "Le développement de <code>(x + 3)(x − 3)</code> est :",
+      "options": ["x² − 9", "x² + 9", "x² − 6x + 9", "x² + 6x − 9"],
+      "correct": 0,
+      "e": "Identité remarquable : <b>(a + b)(a − b) = a² − b²</b>, ici <code>x² − 9</code>."
+    },
+    {
+      "q": "Le développement de <code>(x + 4)²</code> est :",
+      "options": ["x² + 8x + 16", "x² + 16", "x² + 4x + 16", "x² − 8x + 16"],
+      "correct": 0,
+      "e": "Identité <b>(a + b)² = a² + 2ab + b²</b> : <code>x² + 2×4x + 16 = x² + 8x + 16</code>."
+    },
+    {
+      "q": "Les solutions de l'inéquation <code>2x + 1 &lt; 7</code> sont :",
+      "options": ["x &lt; 3", "x &gt; 3", "x &lt; 4", "x &gt; 4"],
+      "correct": 0,
+      "e": "<code>2x &lt; 6</code> donc <b>x &lt; 3</b>."
+    },
+    {
+      "q": "Si <code>x = −2</code>, la valeur de <code>x² − 3x + 1</code> est :",
+      "options": ["11", "−1", "3", "9"],
+      "correct": 0,
+      "e": "<code>(−2)² − 3×(−2) + 1 = 4 + 6 + 1 = 11</code>."
+    },
+    {
+      "q": "La factorisation de <code>x² − 25</code> est :",
+      "options": ["(x − 5)(x + 5)", "(x − 5)²", "(x + 5)²", "(x − 25)(x + 1)"],
+      "correct": 0,
+      "e": "Identité <b>a² − b² = (a − b)(a + b)</b> avec <code>a = x</code> et <code>b = 5</code>."
+    },
+    {
+      "q": "La solution du système <code>x + y = 5</code> et <code>x − y = 1</code> est :",
+      "options": ["x = 3 et y = 2", "x = 2 et y = 3", "x = 4 et y = 1", "x = 5 et y = 0"],
+      "correct": 0,
+      "e": "En additionnant les deux équations : <code>2x = 6</code> donc <code>x = 3</code>, puis <code>y = 2</code>."
+    },
+    {
+      "q": "Le développement de <code>(2x − 1)(x + 3)</code> est :",
+      "options": ["2x² + 5x − 3", "2x² − 5x − 3", "2x² + 5x + 3", "2x² − 3"],
+      "correct": 0,
+      "e": "<code>2x×x + 2x×3 + (−1)×x + (−1)×3 = 2x² + 6x − x − 3 = 2x² + 5x − 3</code>."
+    }
+  ]
+}

@@ -83,6 +83,9 @@ h1 em{font-style:italic;font-weight:500;color:var(--gold)}
 .quiz-card .arrow{font-size:18px;color:var(--gold);font-weight:700}
 .quiz-card.dead{cursor:default;opacity:.6}
 .quiz-card.dead:hover{transform:none;box-shadow:none}
+.quiz-card.general{background:linear-gradient(to right,#fffbee,var(--paper-2))}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin:6px 0 10px 4px}
 
 /* ---------- Buttons ---------- */
 .btn{display:block;width:100%;border:none;cursor:pointer;font-family:'Hanken Grotesk',sans-serif;

@@ -7,17 +7,46 @@
       "name": "Première · Spé Maths",
       "icon": "∫",
       "color": "#2f6f8f",
-      "general_training": { "total": 30 },
+      "general_training": {
+        "total": 30
+      },
       "quizzes": [
-        { "id": "spe-second-degre",          "file": "data/premiere-spe/second-degre.json" },
-        { "id": "spe-suites",                "file": "data/premiere-spe/suites.json" },
-        { "id": "spe-derivation",            "file": "data/premiere-spe/derivation.json" },
-        { "id": "spe-fonction-exp",          "file": "data/premiere-spe/fonction-exponentielle.json" },
-        { "id": "spe-trigo",                 "file": "data/premiere-spe/trigonometrie.json" },
-        { "id": "spe-produit-scalaire",      "file": "data/premiere-spe/produit-scalaire.json" },
-        { "id": "spe-geometrie-reperee",     "file": "data/premiere-spe/geometrie-reperee.json" },
-        { "id": "spe-probabilites",          "file": "data/premiere-spe/probabilites.json" },
-        { "id": "spe-variables-aleatoires",  "file": "data/premiere-spe/variables-aleatoires.json" }
+        {
+          "id": "spe-second-degre",
+          "file": "data/premiere-spe/second-degre.json"
+        },
+        {
+          "id": "spe-suites",
+          "file": "data/premiere-spe/suites.json"
+        },
+        {
+          "id": "spe-derivation",
+          "file": "data/premiere-spe/derivation.json"
+        },
+        {
+          "id": "spe-fonction-exp",
+          "file": "data/premiere-spe/fonction-exponentielle.json"
+        },
+        {
+          "id": "spe-trigo",
+          "file": "data/premiere-spe/trigonometrie.json"
+        },
+        {
+          "id": "spe-produit-scalaire",
+          "file": "data/premiere-spe/produit-scalaire.json"
+        },
+        {
+          "id": "spe-geometrie-reperee",
+          "file": "data/premiere-spe/geometrie-reperee.json"
+        },
+        {
+          "id": "spe-probabilites",
+          "file": "data/premiere-spe/probabilites.json"
+        },
+        {
+          "id": "spe-variables-aleatoires",
+          "file": "data/premiere-spe/variables-aleatoires.json"
+        }
       ]
     },
     {
@@ -30,12 +59,34 @@
         "description": "10 questions tirées au hasard dans toute la base — comme le vrai examen."
       },
       "quizzes": [
-        { "id": "brevet-calcul",    "file": "data/brevet/calcul-numerique.json" },
-        { "id": "brevet-algebre",   "file": "data/brevet/algebre.json" },
-        { "id": "brevet-fonctions", "file": "data/brevet/fonctions.json" },
-        { "id": "brevet-geo",       "file": "data/brevet/geometrie.json" },
-        { "id": "brevet-stats",     "file": "data/brevet/stats-probas.json" },
-        { "id": "brevet-3eme",      "file": "data/brevet/notions-3eme.json" }
+        {
+          "id": "brevet-annales",
+          "file": "data/brevet/annales.json"
+        },
+        {
+          "id": "brevet-calcul",
+          "file": "data/brevet/calcul-numerique.json"
+        },
+        {
+          "id": "brevet-algebre",
+          "file": "data/brevet/algebre.json"
+        },
+        {
+          "id": "brevet-fonctions",
+          "file": "data/brevet/fonctions.json"
+        },
+        {
+          "id": "brevet-geo",
+          "file": "data/brevet/geometrie.json"
+        },
+        {
+          "id": "brevet-stats",
+          "file": "data/brevet/stats-probas.json"
+        },
+        {
+          "id": "brevet-3eme",
+          "file": "data/brevet/notions-3eme.json"
+        }
       ]
     },
     {
@@ -44,7 +95,10 @@
       "icon": "∑",
       "color": "#c9871f",
       "quizzes": [
-        { "id": "tc-complet", "file": "data/tronc-commun/programme-complet.json" }
+        {
+          "id": "tc-complet",
+          "file": "data/tronc-commun/programme-complet.json"
+        }
       ]
     }
   ]

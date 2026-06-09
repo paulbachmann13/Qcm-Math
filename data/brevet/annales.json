@@ -1,0 +1,104 @@
+{
+  "title": "Annales — vrais sujets",
+  "description": "Questions extraites de sujets officiels de brevet. Style et difficulté identiques au vrai examen.",
+  "questions": [
+    {
+      "theme": "Fonctions",
+      "q": "On considère la fonction <code>f</code> définie par <code>f(x) = 3x − 2</code>. Quelle est l'image de −4 par cette fonction ?",
+      "options": ["−14", "−10", "−3", "10"],
+      "correct": 0,
+      "e": "<code>f(−4) = 3 × (−4) − 2 = −12 − 2 = −14</code>."
+    },
+    {
+      "theme": "Calcul numérique",
+      "q": "Combien vaut <code>(−5)³</code> ?",
+      "options": ["−125", "−15", "125", "15"],
+      "correct": 0,
+      "e": "<code>(−5)³ = (−5) × (−5) × (−5) = 25 × (−5) = −125</code>. Le cube d'un nombre négatif est négatif."
+    },
+    {
+      "theme": "Statistiques",
+      "q": "On a mesuré les tailles (en m) de sept élèves : 1,46 ; 1,65 ; 1,6 ; 1,72 ; 1,7 ; 1,67 ; 1,75. Quelle est la médiane de ces tailles ?",
+      "options": ["1,72", "1,67", "1,65", "1,70"],
+      "correct": 1,
+      "e": "On classe les valeurs : 1,46 ; 1,60 ; 1,65 ; <b>1,67</b> ; 1,70 ; 1,72 ; 1,75. La médiane est la 4ᵉ valeur (centrale) : <b>1,67 m</b>."
+    },
+    {
+      "theme": "Géométrie",
+      "q": "Dans un triangle ABC rectangle en A, on a AB = 4, CA = 3 et BC = 5. α désigne l'angle en B. Quelle est la valeur de <code>cos(α)</code> ?",
+      "options": ["0,8", "0,75", "0,6", "1,25"],
+      "correct": 0,
+      "e": "<code>cos(α) = côté adjacent / hypoténuse = AB / BC = 4 / 5 = 0,8</code>."
+    },
+    {
+      "theme": "Géométrie",
+      "q": "ABC est un triangle tel que AB = 20 cm, BC = 21 cm et AC = 29 cm. On peut affirmer que :",
+      "options": ["ABC est un triangle rectangle en B", "ABC est un triangle rectangle en A", "ABC est un triangle rectangle en C", "ABC n'est pas un triangle rectangle"],
+      "correct": 0,
+      "e": "On vérifie Pythagore avec AC comme hypoténuse (le plus grand côté) : <code>AB² + BC² = 400 + 441 = 841 = 29² = AC²</code>. Donc ABC est rectangle en B."
+    },
+    {
+      "theme": "Fonctions",
+      "q": "Une fonction affine <code>f</code> passe par les points (−2 ; 0) et (0 ; 1). Son expression est :",
+      "options": ["f(x) = x/2 + 1", "f(x) = 2x + 1", "f(x) = x/2 − 2", "f(x) = 2x − 2"],
+      "correct": 0,
+      "e": "Le coefficient directeur vaut <code>(1−0)/(0−(−2)) = 1/2</code> et l'ordonnée à l'origine est 1. Donc <b>f(x) = x/2 + 1</b>. Vérification : f(−2) = 0 ✓"
+    },
+    {
+      "theme": "Notions de 3ème",
+      "q": "Un carré de côté 1 (carré n°1) et un carré de côté 2 (carré n°2) sont placés de part et d'autre d'un point O. Le carré n°2 est l'image du carré n°1 par :",
+      "options": ["l'homothétie de centre O et de rapport −2", "la symétrie centrale de centre O", "l'homothétie de centre O et de rapport 2", "la translation qui transforme C en E"],
+      "correct": 0,
+      "e": "Les deux carrés sont de part et d'autre de O (côtés opposés) → rapport négatif. La taille double → |rapport| = 2. C'est donc <b>l'homothétie de centre O et de rapport −2</b>."
+    },
+    {
+      "theme": "Calcul numérique",
+      "q": "Le cocktail Bora-Bora est composé de jus d'ananas, de jus de fruit de la passion et de jus de citron dans le ratio 10 : 6 : 2. Pour réaliser 90 cL de ce cocktail, il faut prévoir :",
+      "options": ["30 cL de jus de fruit de la passion", "6 cL de jus de fruit de la passion", "54 cL de jus de fruit de la passion", "45 cL de jus de fruit de la passion"],
+      "correct": 0,
+      "e": "Total des parts : 10 + 6 + 2 = 18. Une part vaut 90 / 18 = 5 cL. Jus de la passion = 6 parts × 5 = <b>30 cL</b>."
+    },
+    {
+      "theme": "Calcul numérique",
+      "q": "Un maraîcher a cueilli 408 pommes et 168 poires. Il veut remplir des sacs comportant chacun le même nombre de pommes et le même nombre de poires, en utilisant tous les fruits. Le plus grand nombre de sacs qu'il peut remplir est :",
+      "options": ["24 sacs", "48 sacs", "8 sacs", "6 sacs"],
+      "correct": 0,
+      "e": "Il faut calculer PGCD(408, 168). Par l'algorithme d'Euclide : 408 = 2×168 + 72 ; 168 = 2×72 + 24 ; 72 = 3×24. Donc PGCD = <b>24 sacs</b>. (17 pommes et 7 poires par sac.)"
+    },
+    {
+      "theme": "Statistiques",
+      "q": "Dans une classe de 25 élèves, 60 % des élèves sont des filles. Combien y a-t-il de filles dans cette classe ?",
+      "options": ["15", "10", "20", "12"],
+      "correct": 0,
+      "e": "<code>60 % × 25 = 0,6 × 25 = 15</code> filles."
+    },
+    {
+      "theme": "Calcul numérique",
+      "q": "Quelle est la décomposition en produit de facteurs premiers de 126 ?",
+      "options": ["2 × 3² × 7", "2 × 9 × 7", "2² × 5² + 2 × 13", "3 × 6 × 7"],
+      "correct": 0,
+      "e": "<code>126 = 2 × 63 = 2 × 9 × 7 = 2 × 3² × 7</code>. Seule cette écriture utilise uniquement des nombres premiers."
+    },
+    {
+      "theme": "Statistiques",
+      "q": "Un sac contient 17 jetons rouges, 23 jetons jaunes et 20 jetons bleus. On tire un jeton au hasard. Quelle est la probabilité d'obtenir un jeton rouge ou jaune ?",
+      "options": ["2/3", "0,6", "17/23", "40/23"],
+      "correct": 0,
+      "e": "Total : 17 + 23 + 20 = 60 jetons. Favorables (rouge ou jaune) : 17 + 23 = 40. <code>P = 40/60 = 2/3</code>."
+    },
+    {
+      "theme": "Notions de 3ème",
+      "q": "Dans un octogone régulier ABCDEFGH (sommets dans l'ordre, centre O), quelle est l'image du segment [DC] par la rotation de centre O qui transforme A en D ?",
+      "options": ["[GF]", "[GE]", "[AH]", "[EF]"],
+      "correct": 0,
+      "e": "La rotation transforme A en D (3 positions). Elle transforme donc chaque sommet de 3 crans : D → G et C → F. L'image de [DC] est <b>[GF]</b>."
+    },
+    {
+      "theme": "Géométrie",
+      "q": "Quel est le volume d'un pavé droit de hauteur 1,5 m et de base rectangulaire de 2 m de longueur et 1,3 m de largeur ? (1 m³ = 1000 L)",
+      "options": ["3 900 L", "2,6 m³", "3 000 L", "39 m³"],
+      "correct": 0,
+      "e": "<code>V = l × L × h = 2 × 1,3 × 1,5 = 3,9 m³ = 3 900 L</code>."
+    }
+  ]
+}

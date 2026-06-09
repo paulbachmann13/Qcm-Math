@@ -4,49 +4,89 @@
   "questions": [
     {
       "q": "Une variable aléatoire <code>X</code> suit une loi de probabilité. La somme de toutes ses probabilités vaut :",
-      "options": ["1", "0", "E(X)", "Cela dépend de X"],
+      "options": [
+        "1",
+        "Cela dépend de X",
+        "0",
+        "E(X)"
+      ],
       "correct": 0,
       "e": "Par définition, <b>Σ P(X = xᵢ) = 1</b> : l'un des résultats se réalise forcément."
     },
     {
       "q": "L'espérance de <code>X</code> est définie par :",
-      "options": ["E(X) = Σ xᵢ · P(X = xᵢ)", "E(X) = Σ P(X = xᵢ)", "E(X) = max(xᵢ)", "E(X) = Σ xᵢ"],
-      "correct": 0,
+      "options": [
+        "E(X) = max(xᵢ)",
+        "E(X) = Σ xᵢ",
+        "E(X) = Σ xᵢ · P(X = xᵢ)",
+        "E(X) = Σ P(X = xᵢ)"
+      ],
+      "correct": 2,
       "e": "<b>E(X) = Σ xᵢ · P(X = xᵢ)</b> : c'est la moyenne pondérée des valeurs par leurs probabilités."
     },
     {
       "q": "<code>X</code> prend les valeurs 1, 2, 3 avec probabilités 0,5 ; 0,3 ; 0,2. Alors <code>E(X)</code> = :",
-      "options": ["1,7", "2", "1,5", "3"],
-      "correct": 0,
+      "options": [
+        "1,5",
+        "2",
+        "1,7",
+        "3"
+      ],
+      "correct": 2,
       "e": "<code>E(X) = 1×0,5 + 2×0,3 + 3×0,2 = 0,5 + 0,6 + 0,6 = 1,7</code>."
     },
     {
       "q": "La variance de <code>X</code> vérifie la formule :",
-      "options": ["V(X) = E(X²) − (E(X))²", "V(X) = E(X) − E(X²)", "V(X) = (E(X))²", "V(X) = E(X²)"],
-      "correct": 0,
+      "options": [
+        "V(X) = (E(X))²",
+        "V(X) = E(X²) − (E(X))²",
+        "V(X) = E(X) − E(X²)",
+        "V(X) = E(X²)"
+      ],
+      "correct": 1,
       "e": "Formule de König-Huygens : <b>V(X) = E(X²) − (E(X))²</b>. À savoir par cœur."
     },
     {
       "q": "L'écart-type <code>σ(X)</code> est lié à la variance par :",
-      "options": ["σ(X) = √V(X)", "σ(X) = V(X)²", "σ(X) = V(X)/2", "σ(X) = E(X)"],
+      "options": [
+        "σ(X) = √V(X)",
+        "σ(X) = V(X)/2",
+        "σ(X) = E(X)",
+        "σ(X) = V(X)²"
+      ],
       "correct": 0,
       "e": "<b>σ(X) = √V(X)</b>. L'écart-type a la même unité que X, ce qui le rend plus facile à interpréter."
     },
     {
       "q": "Pour une constante <code>k</code>, <code>E(kX)</code> = :",
-      "options": ["k·E(X)", "E(X) + k", "k²·E(X)", "E(X)"],
-      "correct": 0,
+      "options": [
+        "E(X) + k",
+        "k·E(X)",
+        "k²·E(X)",
+        "E(X)"
+      ],
+      "correct": 1,
       "e": "L'espérance est linéaire : <b>E(kX) = k·E(X)</b>."
     },
     {
       "q": "Pour une constante <code>k</code>, <code>V(kX)</code> = :",
-      "options": ["k²·V(X)", "k·V(X)", "V(X) + k", "V(X)"],
-      "correct": 0,
+      "options": [
+        "V(X)",
+        "k²·V(X)",
+        "k·V(X)",
+        "V(X) + k"
+      ],
+      "correct": 1,
       "e": "La variance est quadratique : <b>V(kX) = k²·V(X)</b>."
     },
     {
       "q": "<code>X</code> prend les valeurs 0 et 1 avec <code>P(X = 1) = p</code>. Alors <code>V(X)</code> = :",
-      "options": ["p(1 − p)", "p²", "p", "1 − p"],
+      "options": [
+        "p(1 − p)",
+        "1 − p",
+        "p²",
+        "p"
+      ],
       "correct": 0,
       "e": "<code>E(X) = p</code>, <code>E(X²) = p</code>, donc <code>V(X) = p − p² = p(1 − p)</code>. C'est la variance d'une loi de Bernoulli."
     }

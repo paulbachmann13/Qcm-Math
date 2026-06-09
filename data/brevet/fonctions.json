@@ -4,62 +4,112 @@
   "questions": [
     {
       "q": "La fonction <code>f(x) = 3x − 2</code>. Quelle est la valeur de <code>f(4)</code> ?",
-      "options": ["10", "12", "8", "14"],
-      "correct": 0,
+      "options": [
+        "12",
+        "8",
+        "10",
+        "14"
+      ],
+      "correct": 2,
       "e": "<code>f(4) = 3 × 4 − 2 = 12 − 2 = 10</code>."
     },
     {
       "q": "Une fonction linéaire est de la forme :",
-      "options": ["f(x) = ax", "f(x) = ax + b (b ≠ 0)", "f(x) = a + b", "f(x) = ax²"],
-      "correct": 0,
+      "options": [
+        "f(x) = ax + b (b ≠ 0)",
+        "f(x) = a + b",
+        "f(x) = ax²",
+        "f(x) = ax"
+      ],
+      "correct": 3,
       "e": "Une fonction <b>linéaire</b> passe par l'origine : <code>f(x) = ax</code>. Si <code>b ≠ 0</code>, c'est une fonction <b>affine</b>."
     },
     {
       "q": "La droite <code>y = 2x + 1</code> passe par le point :",
-      "options": ["(0 ; 1)", "(1 ; 0)", "(0 ; 2)", "(2 ; 0)"],
-      "correct": 0,
+      "options": [
+        "(1 ; 0)",
+        "(0 ; 1)",
+        "(0 ; 2)",
+        "(2 ; 0)"
+      ],
+      "correct": 1,
       "e": "En <code>x = 0</code> : <code>y = 1</code>. La droite coupe l'axe des ordonnées en <b>(0 ; 1)</b>."
     },
     {
       "q": "Le coefficient directeur de la droite passant par A(1 ; 3) et B(3 ; 7) est :",
-      "options": ["2", "4", "1", "3"],
+      "options": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
       "correct": 0,
       "e": "<code>m = (7 − 3)/(3 − 1) = 4/2 = 2</code>."
     },
     {
       "q": "La fonction <code>f(x) = −2x + 5</code> est :",
-      "options": ["Décroissante", "Croissante", "Constante", "Ni l'une ni l'autre"],
-      "correct": 0,
+      "options": [
+        "Croissante",
+        "Décroissante",
+        "Ni l'une ni l'autre",
+        "Constante"
+      ],
+      "correct": 1,
       "e": "Le coefficient directeur est <code>−2 &lt; 0</code>, donc la fonction est <b>décroissante</b>."
     },
     {
       "q": "Pour quelle valeur de <code>x</code> a-t-on <code>f(x) = 0</code> si <code>f(x) = 3x − 6</code> ?",
-      "options": ["2", "6", "−2", "3"],
-      "correct": 0,
+      "options": [
+        "3",
+        "6",
+        "−2",
+        "2"
+      ],
+      "correct": 3,
       "e": "<code>3x − 6 = 0</code> ⇒ <code>3x = 6</code> ⇒ <b>x = 2</b>. C'est la racine (zéro) de la fonction."
     },
     {
       "q": "Sur un graphique, la valeur de <code>f(2)</code> se lit :",
-      "options": ["Sur l'axe des ordonnées, à partir de x = 2", "Sur l'axe des abscisses, à partir de y = 2", "En multipliant 2 par la pente", "Sur le sommet de la courbe"],
-      "correct": 0,
+      "options": [
+        "Sur le sommet de la courbe",
+        "Sur l'axe des abscisses, à partir de y = 2",
+        "Sur l'axe des ordonnées, à partir de x = 2",
+        "En multipliant 2 par la pente"
+      ],
+      "correct": 2,
       "e": "On repère <code>x = 2</code> sur l'axe horizontal, on monte jusqu'à la courbe, et on lit la valeur <b>sur l'axe vertical</b>."
     },
     {
       "q": "La droite d'équation <code>y = 4x</code> passe par :",
-      "options": ["L'origine (0 ; 0)", "(0 ; 4)", "(1 ; 0)", "(4 ; 4)"],
-      "correct": 0,
+      "options": [
+        "(1 ; 0)",
+        "(0 ; 4)",
+        "L'origine (0 ; 0)",
+        "(4 ; 4)"
+      ],
+      "correct": 2,
       "e": "Toute fonction linéaire <code>y = ax</code> passe par <b>l'origine</b> : pour <code>x = 0</code>, <code>y = 0</code>."
     },
     {
       "q": "Si <code>f(x) = 2x + 3</code>, alors <code>f(−1)</code> vaut :",
-      "options": ["1", "−1", "5", "3"],
-      "correct": 0,
+      "options": [
+        "3",
+        "−1",
+        "5",
+        "1"
+      ],
+      "correct": 3,
       "e": "<code>f(−1) = 2 × (−1) + 3 = −2 + 3 = 1</code>."
     },
     {
       "q": "Deux droites <code>y = 3x + 1</code> et <code>y = 3x − 2</code> sont :",
-      "options": ["Parallèles", "Perpendiculaires", "Confondues", "Sécantes en un point"],
-      "correct": 0,
+      "options": [
+        "Sécantes en un point",
+        "Parallèles",
+        "Confondues",
+        "Perpendiculaires"
+      ],
+      "correct": 1,
       "e": "Même coefficient directeur (3) mais ordonnées à l'origine différentes ⇒ droites <b>parallèles</b>."
     }
   ]

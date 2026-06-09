@@ -4,49 +4,89 @@
   "questions": [
     {
       "q": "Le discriminant du trinôme <code>ax² + bx + c</code> est égal à :",
-      "options": ["b² − 4ac", "b² + 4ac", "4ac − b²", "2a + b"],
+      "options": [
+        "b² − 4ac",
+        "2a + b",
+        "4ac − b²",
+        "b² + 4ac"
+      ],
       "correct": 0,
       "e": "Par définition, le discriminant vaut <b>Δ = b² − 4ac</b>. Son signe donne le nombre de racines."
     },
     {
       "q": "Combien le trinôme <code>x² − 5x + 6</code> admet-il de racines réelles ?",
-      "options": ["Aucune", "Une", "Deux", "Une infinité"],
+      "options": [
+        "Une infinité",
+        "Une",
+        "Deux",
+        "Aucune"
+      ],
       "correct": 2,
       "e": "<code>Δ = (−5)² − 4×1×6 = 25 − 24 = 1 &gt; 0</code> ⇒ <b>deux racines réelles distinctes</b>."
     },
     {
       "q": "Les racines de <code>x² − 5x + 6</code> sont :",
-      "options": ["2 et 3", "−2 et −3", "1 et 6", "5 et 6"],
-      "correct": 0,
+      "options": [
+        "5 et 6",
+        "2 et 3",
+        "1 et 6",
+        "−2 et −3"
+      ],
+      "correct": 1,
       "e": "<code>x = (5 ± √1)/2</code>, soit <code>x = 3</code> ou <code>x = 2</code>. On vérifie : <b>2 × 3 = 6</b> et <b>2 + 3 = 5</b>."
     },
     {
       "q": "Si <code>Δ &lt; 0</code>, alors le trinôme <code>ax² + bx + c</code> :",
-      "options": ["Est toujours du signe de a", "Change de signe une fois", "Est toujours positif", "S'annule en un point"],
+      "options": [
+        "Est toujours du signe de a",
+        "Est toujours positif",
+        "Change de signe une fois",
+        "S'annule en un point"
+      ],
       "correct": 0,
       "e": "Quand <code>Δ &lt; 0</code>, il n'y a pas de racine : le trinôme garde un signe constant, <b>celui de a</b>, sur tout ℝ."
     },
     {
       "q": "La forme canonique de <code>x² − 4x + 1</code> est :",
-      "options": ["(x − 2)² − 3", "(x − 2)² + 1", "(x + 2)² − 3", "(x − 4)² + 1"],
-      "correct": 0,
+      "options": [
+        "(x − 4)² + 1",
+        "(x + 2)² − 3",
+        "(x − 2)² + 1",
+        "(x − 2)² − 3"
+      ],
+      "correct": 3,
       "e": "L'abscisse du sommet est <code>α = −b/2a = 2</code>, et <code>β = f(2) = 4 − 8 + 1 = −3</code>, d'où <b>(x − 2)² − 3</b>."
     },
     {
       "q": "Lorsqu'il a deux racines, la somme des racines de <code>ax² + bx + c</code> vaut :",
-      "options": ["−b/a", "c/a", "b/a", "−c/a"],
-      "correct": 0,
+      "options": [
+        "−c/a",
+        "c/a",
+        "−b/a",
+        "b/a"
+      ],
+      "correct": 2,
       "e": "On a <b>somme = −b/a</b> et <b>produit = c/a</b>. Très utile pour retrouver ou vérifier des racines."
     },
     {
       "q": "L'abscisse du sommet de la parabole d'équation <code>y = x² − 6x + 5</code> est :",
-      "options": ["3", "−3", "6", "5"],
-      "correct": 0,
+      "options": [
+        "5",
+        "3",
+        "−3",
+        "6"
+      ],
+      "correct": 1,
       "e": "L'abscisse du sommet est <code>−b/2a = 6/2 = 3</code>."
     },
     {
       "q": "L'ensemble des solutions de l'inéquation <code>x² − x − 6 &gt; 0</code> est :",
-      "options": ["]−∞ ; −2[ ∪ ]3 ; +∞[", "]−2 ; 3[", "]−∞ ; 3[", "]−3 ; 2["],
+      "options": [
+        "]−∞ ; −2[ ∪ ]3 ; +∞[",
+        "]−3 ; 2[",
+        "]−2 ; 3[",
+        "]−∞ ; 3["
+      ],
       "correct": 0,
       "e": "Les racines sont <code>−2</code> et <code>3</code>, et <code>a = 1 &gt; 0</code> : le trinôme est positif <b>à l'extérieur des racines</b>."
     }

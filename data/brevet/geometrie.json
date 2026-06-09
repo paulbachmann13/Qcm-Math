@@ -4,61 +4,111 @@
   "questions": [
     {
       "q": "Dans un triangle rectangle de cathètes 3 et 4, l'hypoténuse mesure :",
-      "options": ["5", "7", "√7", "25"],
-      "correct": 0,
+      "options": [
+        "7",
+        "5",
+        "25",
+        "√7"
+      ],
+      "correct": 1,
       "e": "Pythagore : <code>c² = 3² + 4² = 9 + 16 = 25</code>, donc <b>c = 5</b>."
     },
     {
       "q": "Dans un triangle rectangle, <code>sin(α) = côté opposé / hypoténuse</code>. Si l'opposé vaut 6 et l'hypoténuse 10, alors <code>sin(α)</code> = :",
-      "options": ["0,6", "0,8", "1,67", "0,36"],
-      "correct": 0,
+      "options": [
+        "1,67",
+        "0,6",
+        "0,36",
+        "0,8"
+      ],
+      "correct": 1,
       "e": "<code>sin(α) = 6/10 = 0,6</code>."
     },
     {
       "q": "L'aire d'un triangle de base 8 cm et de hauteur 5 cm est :",
-      "options": ["20 cm²", "40 cm²", "13 cm²", "80 cm²"],
-      "correct": 0,
+      "options": [
+        "80 cm²",
+        "40 cm²",
+        "13 cm²",
+        "20 cm²"
+      ],
+      "correct": 3,
       "e": "Aire d'un triangle = <code>base × hauteur / 2 = 8 × 5 / 2 = 20 cm²</code>."
     },
     {
       "q": "Deux triangles sont semblables. Le plus grand a un côté de 9 cm correspondant à un côté de 3 cm dans le plus petit. Le rapport de similitude est :",
-      "options": ["3", "1/3", "6", "27"],
-      "correct": 0,
+      "options": [
+        "1/3",
+        "6",
+        "3",
+        "27"
+      ],
+      "correct": 2,
       "e": "Rapport = grand/petit = <code>9/3 = 3</code>."
     },
     {
       "q": "Dans un triangle ABC, si DE est parallèle à BC avec D sur AB et E sur AC, alors d'après le théorème de Thalès :",
-      "options": ["AD/AB = AE/AC = DE/BC", "AD/DB = AE/EC = BC/DE", "AB/AD = AC/AE", "AD × BC = AB × DE"],
-      "correct": 0,
+      "options": [
+        "AD × BC = AB × DE",
+        "AD/AB = AE/AC = DE/BC",
+        "AD/DB = AE/EC = BC/DE",
+        "AB/AD = AC/AE"
+      ],
+      "correct": 1,
       "e": "Le théorème de Thalès donne <b>AD/AB = AE/AC = DE/BC</b>."
     },
     {
       "q": "La somme des angles d'un triangle est :",
-      "options": ["180°", "360°", "90°", "270°"],
-      "correct": 0,
+      "options": [
+        "360°",
+        "90°",
+        "270°",
+        "180°"
+      ],
+      "correct": 3,
       "e": "La somme des angles intérieurs d'un triangle vaut toujours <b>180°</b>."
     },
     {
       "q": "Le périmètre d'un cercle de rayon 5 cm est (π ≈ 3,14) :",
-      "options": ["31,4 cm", "78,5 cm", "15,7 cm", "25 cm"],
-      "correct": 0,
+      "options": [
+        "25 cm",
+        "78,5 cm",
+        "15,7 cm",
+        "31,4 cm"
+      ],
+      "correct": 3,
       "e": "Périmètre = <code>2πr = 2 × 3,14 × 5 = 31,4 cm</code>."
     },
     {
       "q": "Dans un triangle rectangle, <code>cos(α) = côté adjacent / hypoténuse</code>. Si l'adjacent vaut 8 et l'hypoténuse 10, alors <code>cos(α)</code> = :",
-      "options": ["0,8", "0,6", "1,25", "0,4"],
-      "correct": 0,
+      "options": [
+        "0,6",
+        "0,4",
+        "1,25",
+        "0,8"
+      ],
+      "correct": 3,
       "e": "<code>cos(α) = 8/10 = 0,8</code>."
     },
     {
       "q": "Un angle et son angle supplémentaire ont une somme de :",
-      "options": ["180°", "90°", "360°", "270°"],
+      "options": [
+        "180°",
+        "270°",
+        "360°",
+        "90°"
+      ],
       "correct": 0,
       "e": "Deux angles supplémentaires sont complémentaires à 180° : <b>α + β = 180°</b>."
     },
     {
       "q": "L'aire d'un disque de rayon 4 cm est (π ≈ 3,14) :",
-      "options": ["50,24 cm²", "25,12 cm²", "12,56 cm²", "100,48 cm²"],
+      "options": [
+        "50,24 cm²",
+        "12,56 cm²",
+        "100,48 cm²",
+        "25,12 cm²"
+      ],
       "correct": 0,
       "e": "Aire = <code>πr² = 3,14 × 4² = 3,14 × 16 = 50,24 cm²</code>."
     }

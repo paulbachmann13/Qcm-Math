@@ -4,50 +4,90 @@
   "questions": [
     {
       "q": "Le produit scalaire de deux vecteurs <code>u</code> et <code>v</code> est égal à :",
-      "options": ["‖u‖ × ‖v‖ × cos(θ)", "‖u‖ × ‖v‖ × sin(θ)", "‖u‖ + ‖v‖", "‖u‖ × ‖v‖"],
-      "correct": 0,
+      "options": [
+        "‖u‖ × ‖v‖",
+        "‖u‖ × ‖v‖ × sin(θ)",
+        "‖u‖ + ‖v‖",
+        "‖u‖ × ‖v‖ × cos(θ)"
+      ],
+      "correct": 3,
       "e": "Définition : <b>u·v = ‖u‖ × ‖v‖ × cos(θ)</b>, où θ est l'angle entre les deux vecteurs."
     },
     {
       "q": "Dans un repère orthonormé, si <code>u(x ; y)</code> et <code>v(x′ ; y′)</code>, alors <code>u·v</code> = :",
-      "options": ["xx′ + yy′", "xy′ + yx′", "xx′ − yy′", "(x + x′)(y + y′)"],
-      "correct": 0,
+      "options": [
+        "xy′ + yx′",
+        "(x + x′)(y + y′)",
+        "xx′ − yy′",
+        "xx′ + yy′"
+      ],
+      "correct": 3,
       "e": "Expression analytique du produit scalaire : <b>u·v = xx′ + yy′</b>."
     },
     {
       "q": "Deux vecteurs non nuls sont orthogonaux si et seulement si :",
-      "options": ["u·v = 0", "u·v = 1", "u·v &gt; 0", "‖u‖ = ‖v‖"],
-      "correct": 0,
+      "options": [
+        "‖u‖ = ‖v‖",
+        "u·v = 1",
+        "u·v = 0",
+        "u·v &gt; 0"
+      ],
+      "correct": 2,
       "e": "L'orthogonalité se traduit par un produit scalaire nul : <b>u·v = 0</b>."
     },
     {
       "q": "Pour <code>u(2 ; 3)</code> et <code>v(4 ; −1)</code>, le produit scalaire <code>u·v</code> vaut :",
-      "options": ["5", "11", "8", "−3"],
+      "options": [
+        "5",
+        "8",
+        "11",
+        "−3"
+      ],
       "correct": 0,
       "e": "<code>u·v = 2×4 + 3×(−1) = 8 − 3 = 5</code>."
     },
     {
       "q": "La norme du vecteur <code>u(3 ; 4)</code> est :",
-      "options": ["5", "7", "12", "25"],
+      "options": [
+        "5",
+        "12",
+        "7",
+        "25"
+      ],
       "correct": 0,
       "e": "<code>‖u‖ = √(3² + 4²) = √25 = 5</code>."
     },
     {
       "q": "Pour tout vecteur <code>u</code>, le produit scalaire <code>u·u</code> est égal à :",
-      "options": ["‖u‖²", "‖u‖", "2‖u‖", "0"],
-      "correct": 0,
+      "options": [
+        "‖u‖",
+        "2‖u‖",
+        "0",
+        "‖u‖²"
+      ],
+      "correct": 3,
       "e": "<b>u·u = ‖u‖²</b> (on parle de carré scalaire)."
     },
     {
       "q": "Dans un triangle de côtés <code>a</code>, <code>b</code>, <code>c</code>, la formule d'Al-Kashi s'écrit :",
-      "options": ["a² = b² + c² − 2bc·cos(Â)", "a² = b² + c²", "a = b + c − 2bc", "a² = b² + c² + 2bc·cos(Â)"],
+      "options": [
+        "a² = b² + c² − 2bc·cos(Â)",
+        "a² = b² + c²",
+        "a² = b² + c² + 2bc·cos(Â)",
+        "a = b + c − 2bc"
+      ],
       "correct": 0,
       "e": "Al-Kashi généralise Pythagore : <b>a² = b² + c² − 2bc·cos(Â)</b>."
     },
     {
       "q": "Les vecteurs <code>u(1 ; 2)</code> et <code>v(2 ; −1)</code> sont :",
-      "options": ["Orthogonaux", "Colinéaires", "Égaux", "De même norme seulement"],
-      "correct": 0,
+      "options": [
+        "Égaux",
+        "Colinéaires",
+        "Orthogonaux",
+        "De même norme seulement"
+      ],
+      "correct": 2,
       "e": "<code>u·v = 1×2 + 2×(−1) = 2 − 2 = 0</code> ⇒ <b>vecteurs orthogonaux</b>."
     }
   ]

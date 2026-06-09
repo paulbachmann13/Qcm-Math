@@ -4,49 +4,89 @@
   "questions": [
     {
       "q": "Une suite arithmétique a pour premier terme <code>u₀ = 3</code> et raison <code>r = 4</code>. Son terme général est :",
-      "options": ["uₙ = 3 + 4n", "uₙ = 3 × 4ⁿ", "uₙ = 4 + 3n", "uₙ = 3 + 4ⁿ"],
-      "correct": 0,
+      "options": [
+        "uₙ = 3 × 4ⁿ",
+        "uₙ = 3 + 4n",
+        "uₙ = 4 + 3n",
+        "uₙ = 3 + 4ⁿ"
+      ],
+      "correct": 1,
       "e": "Pour une suite arithmétique : <b>uₙ = u₀ + n·r = 3 + 4n</b>."
     },
     {
       "q": "Une suite géométrique a pour premier terme <code>u₀ = 5</code> et raison <code>q = 2</code>. Son terme général est :",
-      "options": ["uₙ = 5 × 2ⁿ", "uₙ = 5 + 2n", "uₙ = 2 × 5ⁿ", "uₙ = 5 × n²"],
+      "options": [
+        "uₙ = 5 × 2ⁿ",
+        "uₙ = 5 × n²",
+        "uₙ = 5 + 2n",
+        "uₙ = 2 × 5ⁿ"
+      ],
       "correct": 0,
       "e": "Pour une suite géométrique : <b>uₙ = u₀ × qⁿ = 5 × 2ⁿ</b>."
     },
     {
       "q": "On définit <code>u₀ = 1</code> et <code>uₙ₊₁ = 2uₙ + 1</code>. Que vaut <code>u₂</code> ?",
-      "options": ["3", "5", "7", "9"],
-      "correct": 2,
+      "options": [
+        "3",
+        "7",
+        "9",
+        "5"
+      ],
+      "correct": 1,
       "e": "<code>u₁ = 2×1 + 1 = 3</code>, puis <code>u₂ = 2×3 + 1 = 7</code>."
     },
     {
       "q": "La somme <code>1 + 2 + 3 + … + 100</code> est égale à :",
-      "options": ["5050", "10100", "1000", "5000"],
-      "correct": 0,
+      "options": [
+        "1000",
+        "5050",
+        "5000",
+        "10100"
+      ],
+      "correct": 1,
       "e": "Somme des entiers : <code>n(n+1)/2 = 100×101/2 = 5050</code>."
     },
     {
       "q": "Pour <code>q ≠ 1</code>, la somme <code>1 + q + q² + … + qⁿ</code> est égale à :",
-      "options": ["(1 − qⁿ⁺¹)/(1 − q)", "(1 − qⁿ)/(1 − q)", "qⁿ⁺¹ − 1", "n·qⁿ"],
+      "options": [
+        "(1 − qⁿ⁺¹)/(1 − q)",
+        "(1 − qⁿ)/(1 − q)",
+        "n·qⁿ",
+        "qⁿ⁺¹ − 1"
+      ],
       "correct": 0,
       "e": "Somme des termes d'une suite géométrique : <b>(1 − qⁿ⁺¹)/(1 − q)</b> (attention à l'exposant n+1)."
     },
     {
       "q": "Une suite géométrique de raison <code>q = 0,5</code> et de premier terme positif est :",
-      "options": ["Croissante", "Décroissante", "Constante", "Non monotone"],
-      "correct": 1,
+      "options": [
+        "Non monotone",
+        "Croissante",
+        "Constante",
+        "Décroissante"
+      ],
+      "correct": 3,
       "e": "Avec des termes positifs et <code>0 &lt; q &lt; 1</code>, la suite est <b>décroissante</b> (chaque terme est plus petit que le précédent)."
     },
     {
       "q": "Une suite arithmétique vérifie <code>u₃ = 7</code> et <code>u₅ = 13</code>. Sa raison est :",
-      "options": ["2", "3", "6", "4"],
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
       "correct": 1,
       "e": "<code>r = (u₅ − u₃)/(5 − 3) = (13 − 7)/2 = 3</code>."
     },
     {
       "q": "Une suite arithmétique de raison <code>r</code> est croissante si et seulement si :",
-      "options": ["r &gt; 0", "r &lt; 0", "r = 0", "u₀ &gt; 0"],
+      "options": [
+        "r &gt; 0",
+        "r = 0",
+        "u₀ &gt; 0",
+        "r &lt; 0"
+      ],
       "correct": 0,
       "e": "Le sens de variation ne dépend que du signe de la raison : <b>r &gt; 0 ⇒ croissante</b>."
     }

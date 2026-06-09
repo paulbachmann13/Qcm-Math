@@ -4,61 +4,111 @@
   "questions": [
     {
       "q": "Les notes de 5 élèves sont : 8, 12, 14, 10, 16. La moyenne est :",
-      "options": ["12", "14", "10", "13"],
-      "correct": 0,
+      "options": [
+        "13",
+        "12",
+        "10",
+        "14"
+      ],
+      "correct": 1,
       "e": "<code>(8 + 12 + 14 + 10 + 16) / 5 = 60 / 5 = 12</code>."
     },
     {
       "q": "Les données suivantes sont classées : 3, 5, 7, 9, 11. La médiane est :",
-      "options": ["7", "9", "5", "6"],
+      "options": [
+        "7",
+        "6",
+        "9",
+        "5"
+      ],
       "correct": 0,
       "e": "La médiane est la valeur centrale d'une série classée. Ici 5 données, la 3ᵉ est <b>7</b>."
     },
     {
       "q": "L'étendue de la série 4, 7, 2, 9, 5 est :",
-      "options": ["7", "5", "9", "4"],
+      "options": [
+        "7",
+        "5",
+        "9",
+        "4"
+      ],
       "correct": 0,
       "e": "Étendue = max − min = <code>9 − 2 = 7</code>."
     },
     {
       "q": "On lance un dé équilibré à 6 faces. La probabilité d'obtenir un nombre pair est :",
-      "options": ["1/2", "1/3", "2/3", "1/6"],
-      "correct": 0,
+      "options": [
+        "1/3",
+        "2/3",
+        "1/6",
+        "1/2"
+      ],
+      "correct": 3,
       "e": "Les nombres pairs sont 2, 4, 6 : 3 issues sur 6. <code>P = 3/6 = 1/2</code>."
     },
     {
       "q": "Dans une classe de 30 élèves, 18 sont des filles. La fréquence des filles est :",
-      "options": ["0,6", "0,4", "18", "60"],
-      "correct": 0,
+      "options": [
+        "18",
+        "60",
+        "0,4",
+        "0,6"
+      ],
+      "correct": 3,
       "e": "<code>18/30 = 0,6</code>, soit 60 %."
     },
     {
       "q": "Un sac contient 3 billes rouges, 2 bleues et 5 vertes. On tire une bille au hasard. La probabilité de tirer une bille verte est :",
-      "options": ["1/2", "1/3", "1/5", "5"],
-      "correct": 0,
+      "options": [
+        "5",
+        "1/2",
+        "1/5",
+        "1/3"
+      ],
+      "correct": 1,
       "e": "5 billes vertes sur 10 au total : <code>P = 5/10 = 1/2</code>."
     },
     {
       "q": "La médiane d'une série partage la série en :",
-      "options": ["Deux moitiés égales", "Deux tiers et un tiers", "Deux groupes de même moyenne", "Deux groupes de même étendue"],
-      "correct": 0,
+      "options": [
+        "Deux tiers et un tiers",
+        "Deux groupes de même moyenne",
+        "Deux groupes de même étendue",
+        "Deux moitiés égales"
+      ],
+      "correct": 3,
       "e": "La médiane est la valeur qui sépare la série en <b>deux moitiés de même effectif</b>."
     },
     {
       "q": "On tire une carte au hasard dans un jeu de 52 cartes. La probabilité de tirer un as est :",
-      "options": ["1/13", "1/4", "4/52", "1/52"],
-      "correct": 0,
+      "options": [
+        "1/52",
+        "4/52",
+        "1/13",
+        "1/4"
+      ],
+      "correct": 2,
       "e": "Il y a 4 as dans 52 cartes : <code>4/52 = 1/13</code>."
     },
     {
       "q": "Sur 200 lancers d'une pièce, on obtient 94 fois face. La fréquence relative de face est :",
-      "options": ["0,47", "0,53", "0,5", "94"],
-      "correct": 0,
+      "options": [
+        "0,53",
+        "94",
+        "0,47",
+        "0,5"
+      ],
+      "correct": 2,
       "e": "<code>94/200 = 0,47</code>. On s'attendait à 0,5 ; c'est la loi des grands nombres qui s'approche de 0,5 avec plus de lancers."
     },
     {
       "q": "La probabilité d'un événement certain est :",
-      "options": ["1", "0", "0,5", "Elle dépend de l'expérience"],
+      "options": [
+        "1",
+        "0",
+        "Elle dépend de l'expérience",
+        "0,5"
+      ],
       "correct": 0,
       "e": "Un événement certain se réalise toujours : sa probabilité est <b>1</b>. Un événement impossible a une probabilité de 0."
     }

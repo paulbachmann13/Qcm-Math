@@ -4,50 +4,90 @@
   "questions": [
     {
       "q": "La probabilité de <code>B</code> sachant <code>A</code>, notée <code>P_A(B)</code>, est égale à :",
-      "options": ["P(A∩B) / P(A)", "P(A∩B) / P(B)", "P(A) × P(B)", "P(A) + P(B)"],
+      "options": [
+        "P(A∩B) / P(A)",
+        "P(A) × P(B)",
+        "P(A) + P(B)",
+        "P(A∩B) / P(B)"
+      ],
       "correct": 0,
       "e": "Par définition, <b>P_A(B) = P(A∩B) / P(A)</b> (avec P(A) ≠ 0)."
     },
     {
       "q": "On a <code>P(A) = 0,6</code> et <code>P_A(B) = 0,5</code>. Alors <code>P(A∩B)</code> = :",
-      "options": ["0,3", "0,1", "1,1", "0,5"],
-      "correct": 0,
+      "options": [
+        "0,1",
+        "1,1",
+        "0,5",
+        "0,3"
+      ],
+      "correct": 3,
       "e": "<code>P(A∩B) = P(A) × P_A(B) = 0,6 × 0,5 = 0,3</code> (formule de l'arbre pondéré)."
     },
     {
       "q": "Deux événements <code>A</code> et <code>B</code> sont indépendants lorsque :",
-      "options": ["P(A∩B) = P(A) × P(B)", "A ∩ B = ∅", "P(A) = P(B)", "P(A∪B) = P(A) + P(B)"],
-      "correct": 0,
+      "options": [
+        "A ∩ B = ∅",
+        "P(A) = P(B)",
+        "P(A∩B) = P(A) × P(B)",
+        "P(A∪B) = P(A) + P(B)"
+      ],
+      "correct": 2,
       "e": "Définition de l'indépendance : <b>P(A∩B) = P(A) × P(B)</b>. À ne pas confondre avec l'incompatibilité (A ∩ B = ∅)."
     },
     {
       "q": "La formule des probabilités totales avec un événement <code>A</code> et son contraire donne :",
-      "options": ["P(B) = P(A∩B) + P(Ā∩B)", "P(B) = P(A∩B) × P(Ā∩B)", "P(B) = P(A) + P(B)", "P(B) = P(A∩B) − P(Ā∩B)"],
-      "correct": 0,
+      "options": [
+        "P(B) = P(A) + P(B)",
+        "P(B) = P(A∩B) × P(Ā∩B)",
+        "P(B) = P(A∩B) − P(Ā∩B)",
+        "P(B) = P(A∩B) + P(Ā∩B)"
+      ],
+      "correct": 3,
       "e": "Comme A et Ā partitionnent l'univers : <b>P(B) = P(A∩B) + P(Ā∩B)</b>."
     },
     {
       "q": "L'espérance d'une variable aléatoire <code>X</code> est :",
-      "options": ["Σ xᵢ · P(X = xᵢ)", "Σ P(X = xᵢ)", "Σ xᵢ", "max(xᵢ)"],
-      "correct": 0,
+      "options": [
+        "Σ xᵢ",
+        "max(xᵢ)",
+        "Σ xᵢ · P(X = xᵢ)",
+        "Σ P(X = xᵢ)"
+      ],
+      "correct": 2,
       "e": "L'espérance est la moyenne pondérée par les probabilités : <b>E(X) = Σ xᵢ · P(X = xᵢ)</b>."
     },
     {
       "q": "X prend les valeurs 0, 1, 2 avec les probabilités 0,5 ; 0,3 ; 0,2. Alors <code>E(X)</code> = :",
-      "options": ["0,7", "1", "0,5", "1,5"],
-      "correct": 0,
+      "options": [
+        "0,5",
+        "1,5",
+        "0,7",
+        "1"
+      ],
+      "correct": 2,
       "e": "<code>E(X) = 0×0,5 + 1×0,3 + 2×0,2 = 0,3 + 0,4 = 0,7</code>."
     },
     {
       "q": "La variance d'une variable aléatoire vérifie :",
-      "options": ["V(X) = E(X²) − (E(X))²", "V(X) = E(X²) + E(X)", "V(X) = (E(X))² − E(X²)", "V(X) = E(X) − E(X²)"],
-      "correct": 0,
+      "options": [
+        "V(X) = (E(X))² − E(X²)",
+        "V(X) = E(X²) + E(X)",
+        "V(X) = E(X²) − (E(X))²",
+        "V(X) = E(X) − E(X²)"
+      ],
+      "correct": 2,
       "e": "Formule de König-Huygens : <b>V(X) = E(X²) − (E(X))²</b>."
     },
     {
       "q": "L'écart-type <code>σ(X)</code> d'une variable aléatoire se calcule par :",
-      "options": ["√V(X)", "V(X)²", "V(X)/2", "E(X)"],
-      "correct": 0,
+      "options": [
+        "V(X)/2",
+        "E(X)",
+        "V(X)²",
+        "√V(X)"
+      ],
+      "correct": 3,
       "e": "L'écart-type est la racine carrée de la variance : <b>σ(X) = √V(X)</b>."
     }
   ]

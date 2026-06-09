@@ -4,50 +4,90 @@
   "questions": [
     {
       "q": "La mesure en radians d'un angle de 180° est :",
-      "options": ["π", "π/2", "2π", "π/4"],
-      "correct": 0,
+      "options": [
+        "π/2",
+        "2π",
+        "π",
+        "π/4"
+      ],
+      "correct": 2,
       "e": "La conversion est <code>rad = deg × π/180</code>, donc <b>180° = π rad</b>."
     },
     {
       "q": "La mesure en radians d'un angle de 90° est :",
-      "options": ["π/2", "π", "π/4", "2π"],
-      "correct": 0,
+      "options": [
+        "π/4",
+        "2π",
+        "π/2",
+        "π"
+      ],
+      "correct": 2,
       "e": "<code>90 × π/180 = π/2</code>."
     },
     {
       "q": "Sur le cercle trigonométrique, <code>cos(0)</code> et <code>sin(0)</code> valent :",
-      "options": ["cos = 1 et sin = 0", "cos = 0 et sin = 1", "cos = 1 et sin = 1", "cos = 0 et sin = 0"],
+      "options": [
+        "cos = 1 et sin = 0",
+        "cos = 0 et sin = 0",
+        "cos = 1 et sin = 1",
+        "cos = 0 et sin = 1"
+      ],
       "correct": 0,
       "e": "Le point de départ du cercle est (1 ; 0), donc <b>cos(0) = 1</b> et <b>sin(0) = 0</b>."
     },
     {
       "q": "<code>cos(π/2)</code> et <code>sin(π/2)</code> valent :",
-      "options": ["cos = 0 et sin = 1", "cos = 1 et sin = 0", "cos = √2/2 et sin = √2/2", "cos = 0 et sin = 0"],
+      "options": [
+        "cos = 0 et sin = 1",
+        "cos = √2/2 et sin = √2/2",
+        "cos = 0 et sin = 0",
+        "cos = 1 et sin = 0"
+      ],
       "correct": 0,
       "e": "Le point à π/2 sur le cercle est (0 ; 1), donc <b>cos(π/2) = 0</b> et <b>sin(π/2) = 1</b>."
     },
     {
       "q": "<code>cos(π/4)</code> et <code>sin(π/4)</code> valent :",
-      "options": ["√2/2 et √2/2", "1/2 et √3/2", "√3/2 et 1/2", "1 et 0"],
+      "options": [
+        "√2/2 et √2/2",
+        "1/2 et √3/2",
+        "√3/2 et 1/2",
+        "1 et 0"
+      ],
       "correct": 0,
       "e": "À 45° (π/4), le point est sur la diagonale : <b>cos(π/4) = sin(π/4) = √2/2 ≈ 0,707</b>."
     },
     {
       "q": "<code>cos(π/3)</code> et <code>sin(π/3)</code> valent :",
-      "options": ["1/2 et √3/2", "√3/2 et 1/2", "√2/2 et √2/2", "0 et 1"],
-      "correct": 0,
+      "options": [
+        "0 et 1",
+        "1/2 et √3/2",
+        "√2/2 et √2/2",
+        "√3/2 et 1/2"
+      ],
+      "correct": 1,
       "e": "Valeurs à 60° : <b>cos(π/3) = 1/2</b> et <b>sin(π/3) = √3/2 ≈ 0,866</b>."
     },
     {
       "q": "Pour tout réel <code>x</code>, <code>cos²(x) + sin²(x)</code> = :",
-      "options": ["1", "0", "2", "cos(2x)"],
-      "correct": 0,
+      "options": [
+        "2",
+        "cos(2x)",
+        "0",
+        "1"
+      ],
+      "correct": 3,
       "e": "C'est la <b>relation fondamentale de la trigonométrie</b> : <code>cos²(x) + sin²(x) = 1</code>, valable pour tout x."
     },
     {
       "q": "La fonction <code>cos</code> est :",
-      "options": ["Paire (cos(−x) = cos(x))", "Impaire (cos(−x) = −cos(x))", "Ni paire ni impaire", "Croissante sur ℝ"],
-      "correct": 0,
+      "options": [
+        "Ni paire ni impaire",
+        "Impaire (cos(−x) = −cos(x))",
+        "Croissante sur ℝ",
+        "Paire (cos(−x) = cos(x))"
+      ],
+      "correct": 3,
       "e": "<b>cos est paire</b> : <code>cos(−x) = cos(x)</code>. À l'inverse, sin est impaire : <code>sin(−x) = −sin(x)</code>."
     }
   ]
